@@ -1,0 +1,21 @@
+Classes:
+Grid
+List with filled positions array with: [x,y,type] (numpy array)
+-Add Object
+-Get Coords
+-Get Grid
+#-Update Grid
+-Reset Grid
+
+Object(cross/circle) 
+
+Controller:
+Menu
+
+While inGame = true...
+Game
+checkVictory
+nextPlay
+
+
+AI
