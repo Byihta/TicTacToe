@@ -1,4 +1,4 @@
-from models import Grid, gameObj
+from structures import Grid, GameObj
 
 g = Grid(3)
 
@@ -9,31 +9,31 @@ pos4 = (2,2)
 pos5 = (1,2)
 pos6 = (0,2)
 
-p1 = gameObj('x', pos1)
-p2 = gameObj('o', pos2)
-p3 = gameObj('x', pos3)
-print(p3.getMark())
-p4 = gameObj('o', pos4)
-p5 = gameObj('x', pos5)
-p6 = gameObj('o', pos6)
+p1 = GameObj('x', pos1)
+p2 = GameObj('o', pos2)
+p3 = GameObj('x', pos3)
+print(p3.mark())
+p4 = GameObj('o', pos4)
+p5 = GameObj('x', pos5)
+p6 = GameObj('o', pos6)
 
 m = [["x", " ", "o"],
      ["x", "o", "x"],
      [" ", " ", "o"]]
 
-print("g.grid: ", [(g.grid[i].getX(),g.grid[i].getY(), g.grid[i].getMark()) for i in range(len(g.grid))])
+print("g.grid: ", [(g._grid[i].xcoord(),g._grid[i].ycoord(), g._grid[i].mark()) for i in range(len(g._grid))])
 g.add(p1)
-print("g.grid: ", [(g.grid[i].getX(),g.grid[i].getY(), g.grid[i].getMark()) for i in range(len(g.grid))])
+print("g.grid: ", [(g._grid[i].xcoord(),g._grid[i].ycoord(), g._grid[i].mark()) for i in range(len(g._grid))])
 g.add(p2)
-print("g.grid: ", [(g.grid[i].getX(),g.grid[i].getY(), g.grid[i].getMark()) for i in range(len(g.grid))])
+print("g.grid: ", [(g._grid[i].xcoord(),g._grid[i].ycoord(), g._grid[i].mark()) for i in range(len(g._grid))])
 g.add(p3)
-print("g.grid: ", [(g.grid[i].getX(),g.grid[i].getY(), g.grid[i].getMark()) for i in range(len(g.grid))])
+print("g.grid: ", [(g._grid[i].xcoord(),g._grid[i].ycoord(), g._grid[i].mark()) for i in range(len(g._grid))])
 g.add(p4)
-print("g.grid: ", [(g.grid[i].getX(),g.grid[i].getY(), g.grid[i].getMark()) for i in range(len(g.grid))])
+print("g.grid: ", [(g._grid[i].xcoord(),g._grid[i].ycoord(), g._grid[i].mark()) for i in range(len(g._grid))])
 g.add(p5)
-print("g.grid: ", [(g.grid[i].getX(),g.grid[i].getY(), g.grid[i].getMark()) for i in range(len(g.grid))])
+print("g.grid: ", [(g._grid[i].xcoord(),g._grid[i].ycoord(), g._grid[i].mark()) for i in range(len(g._grid))])
 g.add(p6)
-print("g.grid: ", [(g.grid[i].getX(),g.grid[i].getY(), g.grid[i].getMark()) for i in range(len(g.grid))])
+print("g.grid: ", [(g._grid[i].xcoord(),g._grid[i].ycoord(), g._grid[i].mark()) for i in range(len(g._grid))])
 
 
 if g.getObj(pos1) == p1:
@@ -67,9 +67,10 @@ else:
     print("Grid is: ", matrix)
     print("Grid wanted is: ", m)
 
-print("Test 6 printGrid:\n\n\n\n")
-g.printGrid()
-    
+# print("Test 6 printGrid:\n\n\n\n")
+# g.printGrid()
 
+print("Test 6: Empty Grid:")
+print(Grid(3).getGrid())
 
     
